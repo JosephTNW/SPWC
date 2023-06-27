@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script defer src="/js/login.js"></script>
+    <script defer src="/js/jquery.min.js"></script>
+    <script defer src="/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">SPWC</a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SPWC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                    </ul>
+                    <a href="/pages/register.html">
+                        <button class="btn btn-outline-success">Register</button>
+                    </a>   
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <form class="container mt-7">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="tcCheck" onchange="isChecked(this, 'btnLogin')">
+            <label class="form-check-label" for="tcCheck">By checking this, you agree to our <span><a href="/pages/tc.html">terms and conditions</a></span></label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnLogin" disabled>Submit</button>
+    </form>
+</body>
+
+</html>
