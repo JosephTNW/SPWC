@@ -8,7 +8,7 @@
   let username, userId, docRef;
 
   const userData = {
-    trashThrown: 666,
+    trashThrown: 0,
   };
 
   authStore.subscribe((curr) => {
@@ -32,10 +32,15 @@
 <Nav />
 
 <div class="container mt-7">
+  {#if userId}
   <h1>Hi, {username} let's help clean the world</h1>
   <img
     src={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
       userId}
   />
   <h2>Total trash thrown  : {userData.trashThrown}</h2>
+  <h2>this is secret</h2>
+  {:else}
+  <h1>505 Forbidden</h1>
+  {/if}
 </div>
